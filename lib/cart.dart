@@ -1,3 +1,5 @@
+//import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:grocery/categorywidget.dart';
 import 'dart:async';
@@ -14,6 +16,51 @@ class Cart extends StatefulWidget {
 }
 
 class _CartState extends State<Cart> {
+  int _counterone = 0;
+  int _countertwo = 0;
+  int _counterthree = 0;
+  void incrementCounterOne() {
+    setState(() {
+      _counterone = _counterone + 1;
+    });
+  }
+
+  void decrementCounterOne() {
+    setState(() {
+      if (_counterone > 0) {
+        _counterone--;
+      } else if (_counterone == 0) print("0");
+    });
+  }
+
+  void incrementCounterTwo() {
+    setState(() {
+      _countertwo = _countertwo + 1;
+    });
+  }
+
+  void decrementCounterTwo() {
+    setState(() {
+      if (_countertwo > 0) {
+        _countertwo--;
+      } else if (_countertwo == 0) print("0");
+    });
+  }
+
+  void incrementCounterThree() {
+    setState(() {
+      _counterthree = _counterthree + 1;
+    });
+  }
+
+  void decrementCounterThree() {
+    setState(() {
+      if (_counterthree > 0) {
+        _counterthree--;
+      } else if (_counterthree == 0) print("0");
+    });
+  }
+
   // void _incrementCounter() {
   //   setState(() {
   //     _counter = _counter + 1;
@@ -74,13 +121,29 @@ class _CartState extends State<Cart> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Image.asset("assets/images/canape.png"),
+                          IconButton(
+                            onPressed: () {
+                              incrementCounterOne();
+                            },
+                            icon: Icon(Icons.add_circle_outlined,
+                                color: Colors.white),
+                            iconSize: 32,
+                          ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   elevation: 15, primary: Colors.white),
                               onPressed: () {},
-                              child: Text("  3  ",
+                              child: Text("$_counterone",
                                   style: TextStyle(color: Colors.black))),
-                          Text("Prize :\$40",
+                          IconButton(
+                            onPressed: () {
+                              decrementCounterOne();
+                            },
+                            icon: Icon(Icons.remove_circle_outlined,
+                                color: Colors.white),
+                            iconSize: 32,
+                          ),
+                          Text("Price:\$40   ",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
@@ -104,13 +167,29 @@ class _CartState extends State<Cart> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Image.asset("assets/images/cakepop.png"),
+                            IconButton(
+                              onPressed: () {
+                                incrementCounterTwo();
+                              },
+                              icon: Icon(Icons.add_circle_outlined,
+                                  color: Colors.white),
+                              iconSize: 32,
+                            ),
                             ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    elevation: 15, primary: Colors.white),
+                                    elevation: 20, primary: Colors.white),
                                 onPressed: () {},
-                                child: Text("  3  ",
+                                child: Text("$_countertwo",
                                     style: TextStyle(color: Colors.black))),
-                            Text("Prize :\$100",
+                            IconButton(
+                              onPressed: () {
+                                decrementCounterTwo();
+                              },
+                              icon: Icon(Icons.remove_circle_outlined,
+                                  color: Colors.white),
+                              iconSize: 32,
+                            ),
+                            Text("Price:\$100  ",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,
@@ -135,19 +214,29 @@ class _CartState extends State<Cart> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Image.asset("assets/images/icecream.png"),
+                            IconButton(
+                              onPressed: () {
+                                incrementCounterThree();
+                              },
+                              icon: Icon(Icons.add_circle_outlined,
+                                  color: Colors.white),
+                              iconSize: 32,
+                            ),
                             ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    elevation: 15, primary: Colors.white),
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              CategoryWidget()));
-                                },
-                                child: Text("  3  ",
+                                    elevation: 20, primary: Colors.white),
+                                onPressed: () {},
+                                child: Text("$_counterthree",
                                     style: TextStyle(color: Colors.black))),
-                            Text("Prize :\$30",
+                            IconButton(
+                              onPressed: () {
+                                decrementCounterThree();
+                              },
+                              icon: Icon(Icons.remove_circle_outlined,
+                                  color: Colors.white),
+                              iconSize: 32,
+                            ),
+                            Text("Price:\$35   ",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,
