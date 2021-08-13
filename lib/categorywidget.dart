@@ -33,7 +33,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30)),
-                    fillColor: Colors.red,
+                    fillColor: Colors.grey,
                     filled: true,
                     prefixIcon: Icon(
                       Icons.search,

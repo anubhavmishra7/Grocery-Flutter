@@ -12,7 +12,7 @@ class LikedWidget extends StatelessWidget {
             child: Text(
               "Liked Items will be shown here",
               style: TextStyle(
-                  color: Colors.green,
+                  color: Colors.grey,
                   fontSize: 24,
                   fontWeight: FontWeight.bold),
             ),

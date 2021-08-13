@@ -110,7 +110,7 @@ class _CartState extends State<Cart> {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        color: Colors.deepOrange,
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(30)),
                     //padding: EdgeInsets.all(5),
                     width: double.infinity,
@@ -156,7 +156,7 @@ class _CartState extends State<Cart> {
                     padding: const EdgeInsets.symmetric(vertical: 28.0),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Colors.deepOrange,
+                          color: Colors.grey,
                           borderRadius: BorderRadius.circular(30)),
                       //padding: EdgeInsets.all(5),
                       width: double.infinity,
@@ -204,7 +204,7 @@ class _CartState extends State<Cart> {
                     padding: const EdgeInsets.symmetric(vertical: 2),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Colors.deepOrange,
+                          color: Colors.grey,
                           borderRadius: BorderRadius.circular(30)),
                       //padding: EdgeInsets.all(5),
                       width: double.infinity,
