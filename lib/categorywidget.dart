@@ -60,7 +60,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                         image: DecorationImage(
                             fit: BoxFit.cover,
                             image: AssetImage('assets/images/masalas.png')),
-                        color: Colors.blue,
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(20)),
                     //color: Colors.blue,
                     width: 160,
@@ -83,7 +83,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                         image: DecorationImage(
                             fit: BoxFit.cover,
                             image: AssetImage('assets/images/honey.png')),
-                        color: Colors.blue,
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(20)),
                     //color: Colors.blue,
                     width: 160,
@@ -114,7 +114,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                         image: DecorationImage(
                             fit: BoxFit.cover,
                             image: AssetImage('assets/images/vegetables.png')),
-                        color: Colors.blue,
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(20)),
                     //color: Colors.blue,
                     width: 160,
@@ -137,7 +137,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                         image: DecorationImage(
                             fit: BoxFit.cover,
                             image: AssetImage('assets/images/cakepop.png')),
-                        color: Colors.blue,
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(20)),
                     //color: Colors.blue,
                     width: 160,
@@ -169,7 +169,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                             fit: BoxFit.cover,
                             image:
                                 AssetImage('assets/images/japanesefood.png')),
-                        color: Colors.blue,
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(20)),
                     //color: Colors.blue,
                     width: 160,
@@ -192,7 +192,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                         image: DecorationImage(
                             fit: BoxFit.cover,
                             image: AssetImage('assets/images/grain.png')),
-                        color: Colors.blue,
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(20)),
                     //color: Colors.blue,
                     width: 160,
@@ -223,7 +223,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                         image: DecorationImage(
                             fit: BoxFit.cover,
                             image: AssetImage('assets/images/icecream.png')),
-                        color: Colors.blue,
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(20)),
                     //color: Colors.blue,
                     width: 160,
@@ -246,7 +246,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                         image: DecorationImage(
                             fit: BoxFit.cover,
                             image: AssetImage('assets/images/donut.png')),
-                        color: Colors.blue,
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(20)),
                     //color: Colors.blue,
                     width: 160,
