@@ -83,7 +83,10 @@ class _SignInState extends State<SignIn> {
                                       autovalidateMode: AutovalidateMode.always,
                                       child: TextFormField(
                                         controller: _email,
-                                        style: TextStyle(color: Colors.blue),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold),
                                         keyboardType:
                                             TextInputType.emailAddress,
                                         onChanged: (value) {
@@ -132,7 +135,8 @@ class _SignInState extends State<SignIn> {
                                           top: 10, left: 8, right: 8),
                                       child: TextFormField(
                                         controller: _password,
-                                        style: TextStyle(color: Colors.blue),
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 21),
                                         obscureText: true,
                                         onChanged: (value) {
                                           //_password;
