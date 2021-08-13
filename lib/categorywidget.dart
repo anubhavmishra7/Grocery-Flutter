@@ -15,6 +15,9 @@ class _CategoryWidgetState extends State<CategoryWidget> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20),
               child: Text(

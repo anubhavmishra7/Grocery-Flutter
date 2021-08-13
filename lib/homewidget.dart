@@ -1,9 +1,11 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:grocery/aboutitems/aboutdonuts.dart';
+import 'package:grocery/aboutdonuts.dart';
+import 'package:grocery/cakepop.dart';
+import 'package:grocery/canape.dart';
 //import 'package:grocery/about.dart';
-import 'package:grocery/aboutitems/honey.dart';
+//import 'package:grocery/aboutitems/honey.dart';
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({Key? key}) : super(key: key);
@@ -96,64 +98,113 @@ class _HomeWidgetState extends State<HomeWidget> {
                           GestureDetector(
                             onTap: () {
                               Navigator.push(context,
-                                  MaterialPageRoute(builder: (_) => Honey()));
+                                  MaterialPageRoute(builder: (_) => Donut()));
                             },
                             child: Container(
                               decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: AssetImage(
-                                          'assets/images/honey.png')),
-                                  color: Colors.blue,
+                                  // image: DecorationImage(
+                                  //     fit: BoxFit.cover,
+                                  //     image: AssetImage(
+                                  //         'assets/images/honey.png')),
+                                  color: Colors.transparent,
                                   borderRadius: BorderRadius.circular(20)),
                               //color: Colors.blue,
                               width: 160,
                               height: 200,
-                              child: Center(
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 120, left: 20),
-                                  child: Text(
-                                    "Honey",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 25),
+
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    height: 170,
+                                    child: Image.asset(
+                                      "assets/images/donut.png",
+                                      scale: 1,
+                                    ),
                                   ),
-                                ),
+                                  Positioned(
+                                    bottom: 7,
+                                    left: 0,
+                                    right: 0,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "  Donuts",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20),
+                                        ),
+                                        Text(
+                                          "\$40  ",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.red,
+                                              fontSize: 20),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
                           GestureDetector(
                             onTap: () {
                               Navigator.push(context,
-                                  MaterialPageRoute(builder: (_) => Donut()));
+                                  MaterialPageRoute(builder: (_) => Cakepop()));
                             },
                             child: Container(
                               decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: AssetImage(
-                                          'assets/images/donut.png')),
-                                  color: Colors.blue,
+                                  // image: DecorationImage(
+                                  //     fit: BoxFit.cover,
+                                  //     image: AssetImage(
+                                  //         'assets/images/honey.png')),
+                                  color: Colors.transparent,
                                   borderRadius: BorderRadius.circular(20)),
+                              //color: Colors.blue,
                               width: 160,
                               height: 200,
-                              child: Center(
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 120, left: 5),
-                                  child: Text(
-                                    ' Donuts ',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 25),
+
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    height: 170,
+                                    child: Image.asset(
+                                      "assets/images/cakepop.png",
+                                      scale: 1,
+                                    ),
                                   ),
-                                ),
+                                  Positioned(
+                                    bottom: 7,
+                                    left: 0,
+                                    right: 0,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "Cakepop",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20),
+                                        ),
+                                        Text(
+                                          "\$30  ",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.red,
+                                              fontSize: 20),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -162,55 +213,112 @@ class _HomeWidgetState extends State<HomeWidget> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image:
-                                        AssetImage('assets/images/canape.png')),
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(20)),
-                            //color: Colors.blue,
-                            width: 160,
-                            height: 200,
-                            child: Center(
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 140, left: 5),
-                                child: Text(
-                                  'Canape',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 25),
-                                ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Canape()));
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  // image: DecorationImage(
+                                  //     fit: BoxFit.cover,
+                                  //     image: AssetImage(
+                                  //         'assets/images/honey.png')),
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(20)),
+                              //color: Colors.blue,
+                              width: 160,
+                              height: 200,
+
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    height: 170,
+                                    child: Image.asset(
+                                      "assets/images/canape.png",
+                                      scale: 1,
+                                    ),
+                                  ),
+                                  Positioned(
+                                    bottom: 7,
+                                    left: 0,
+                                    right: 0,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "  Canape",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20),
+                                        ),
+                                        Text(
+                                          "\$25  ",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.red,
+                                              fontSize: 20),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
                           Container(
                             decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(20),
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image:
-                                        AssetImage('assets/images/grain.png'))),
+                                // image: DecorationImage(
+                                //     fit: BoxFit.cover,
+                                //     image: AssetImage(
+                                //         'assets/images/honey.png')),
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(20)),
+                            //color: Colors.blue,
                             width: 160,
                             height: 200,
-                            child:
-                                //child: Image.asset('assets/images/grain.png')
-                                Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 140, left: 20),
-                              child: Text(
-                                'Grains',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 25),
-                              ),
+
+                            child: Stack(
+                              children: [
+                                Container(
+                                  height: 170,
+                                  child: Image.asset(
+                                    "assets/images/grain.png",
+                                    scale: 1,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 7,
+                                  left: 0,
+                                  right: 0,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        " Grain",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20),
+                                      ),
+                                      Text(
+                                        "\$5  ",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.red,
+                                            fontSize: 20),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -221,27 +329,51 @@ class _HomeWidgetState extends State<HomeWidget> {
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: AssetImage(
-                                        'assets/images/icecream.png')),
-                                color: Colors.blue,
+                                // image: DecorationImage(
+                                //     fit: BoxFit.cover,
+                                //     image: AssetImage(
+                                //         'assets/images/honey.png')),
+                                color: Colors.transparent,
                                 borderRadius: BorderRadius.circular(20)),
                             //color: Colors.blue,
                             width: 160,
                             height: 200,
-                            child: Center(
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 120, left: 0),
-                                child: Text(
-                                  'Ice Cream',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 25),
+
+                            child: Stack(
+                              children: [
+                                Container(
+                                  height: 170,
+                                  child: Image.asset(
+                                    "assets/images/icecream.png",
+                                    scale: 1,
+                                  ),
                                 ),
-                              ),
+                                Positioned(
+                                  bottom: 7,
+                                  left: 0,
+                                  right: 0,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "  IceCream",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20),
+                                      ),
+                                      Text(
+                                        "\$1  ",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.red,
+                                            fontSize: 20),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],

@@ -7,6 +7,7 @@ import 'package:grocery/contact.dart';
 import 'package:grocery/homewidget.dart';
 import 'package:grocery/likedwidget.dart';
 import 'package:grocery/methods.dart';
+import 'package:grocery/notifications.dart';
 //import 'package:grocery/methods.dart';
 
 class Homescreen extends StatefulWidget {
@@ -24,7 +25,16 @@ class _HomescreenState extends State<Homescreen> {
         appBar: AppBar(
             backgroundColor: Colors.black,
             centerTitle: true,
-            actions: [Icon(Icons.notifications_none_outlined)],
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Notifications()));
+                  },
+                  icon: Icon(Icons.notifications_none_outlined))
+            ],
             title: Text("Grocery")),
         backgroundColor: Colors.black87,
         body: ValueListenableBuilder(
@@ -66,14 +76,27 @@ class _HomescreenState extends State<Homescreen> {
                 child:
                     //CircleAvatar(backgroundColor: Colors.green),
                     Center(
-                  child: Text(
-                    "Go get'em",
-                    style: TextStyle(color: Colors.white, fontSize: 30),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Go get'em",
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
+                      SizedBox(
+                        width: 23,
+                      ),
+                      CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/canape.png"),
+                        backgroundColor: Colors.transparent,
+                        radius: 50,
+                      )
+                    ],
                   ),
                 ),
-                decoration: BoxDecoration(color: Colors.black),
+                decoration: BoxDecoration(color: Colors.red),
               ),
               ListTile(
+                trailing: Icon(Icons.contact_phone_sharp),
                 title: Text(
                   "Contact",
                   style: TextStyle(fontSize: 20),
@@ -84,6 +107,7 @@ class _HomescreenState extends State<Homescreen> {
                 },
               ),
               ListTile(
+                trailing: Icon(Icons.notes),
                 title: Text("About Us", style: TextStyle(fontSize: 20)),
                 onTap: () {
                   Navigator.push(
@@ -91,8 +115,13 @@ class _HomescreenState extends State<Homescreen> {
                 },
               ),
               ListTile(
+                  trailing: Icon(Icons.logout_rounded),
                   title: Text("Logout", style: TextStyle(fontSize: 20)),
                   onTap: () => logOut(context)),
+              SizedBox(
+                height: 400,
+              ),
+              Text("                  Version - 3.0.2")
             ],
           ).toList()),
         ),

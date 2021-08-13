@@ -8,8 +8,8 @@ class Honey extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: Stack(
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset("assets/images/honey.png"),
             Text(
